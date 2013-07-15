@@ -1,6 +1,13 @@
 var Nxt = require('mindstorms_bluetooth').Nxt;
 
-var n = new Nxt('/dev/tty.NXT-DevB', function() {
+if(!process.env.NXT_PORT) {
+  console.log("NXT_PORT environment variable not set. Using /dev/tty.NXT-DevB")
+  var NXT_PORT = '/dev/tty.NXT-DevB'
+} else {
+  var NXT_PORT = process.env.NXT_PORT
+}
+
+var n = new Nxt(NXT_PORT, function() {
     console.log('serial port opened')
     //n.get_battery_level()
 
@@ -13,19 +20,21 @@ var n = new Nxt('/dev/tty.NXT-DevB', function() {
     });
 
 
+    // spread out the calls a bit. Otherwise they will step on each other.
+
     setInterval(function() {
       n.get_output_state(n.MOTOR_A)
 
     }, 7200);
 
-    setTimeout( function() {
+    setTimeout(function() {
       setInterval(function() {
         n.get_output_state(n.MOTOR_B)
 
       }, 7200);
     }, 600);
 
-    setTimeout( function() {
+    setTimeout(function() {
       setInterval(function() {
         n.get_output_state(n.MOTOR_C)
 
