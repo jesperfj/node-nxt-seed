@@ -118,7 +118,6 @@ Set the `NXT_PORT` environment variable:
 Now run the app with
 
     $ node test.js
-    $ node test.js 
     serial port opened
     MOTOR 0: tacholimit=0, tachocount=0, blocktachocount=0, rotationcount=0
     MOTOR 1: tacholimit=0, tachocount=1031, blocktachocount=1031, rotationcount=1031
@@ -131,7 +130,3 @@ Now run the app with
     MOTOR 2: tacholimit=0, tachocount=1696, blocktachocount=1696, rotationcount=1696
 
 Try change the position of the motors while it's running (like in this example). The output should reflect the changes.
-
-
-    node test.js
-
