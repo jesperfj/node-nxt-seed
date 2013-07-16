@@ -2,7 +2,11 @@ I pull out my old NXT 1 brick from time to time and I always find myself spendin
 
 This repo is an attempt to give me (and perhaps others) a failsafe way to get started next time I go undust this thing.
 
-I have used many languages over the years: [nqc, nxc](http://bricxcc.sourceforge.net/nbc/), [Java (nxj)](http://lejos.sourceforge.net/), [Ruby](https://github.com/zuk/ruby-nxt) and now [Javascript / Node.js](https://github.com/davsebamse/node-mindstorm-bt). I picked Node this time because the nature of the NXT is inherently real-time and evented and because the Node toolchain is more sane than Ruby and perhaps Java.
+I have used many languages over the years: [nqc, nxc](http://bricxcc.sourceforge.net/nbc/), [Java (nxj)](http://lejos.sourceforge.net/), [Ruby](https://github.com/zuk/ruby-nxt) and now [Javascript / Node.js](https://github.com/davsebamse/node-mindstorm-bt). I picked Node this time because 
+
+* the nature of the NXT is inherently real-time and evented
+* the Node toolchain is more sane than Ruby on Mac OS X
+* I want to play with websockets and browser based clients written in JavaScript
 
 # Environment
 
